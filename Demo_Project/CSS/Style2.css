@@ -14,6 +14,7 @@
 	width:30%;
 	float: left;
 }
+
 .head2{
 	width: 70%;
 	float: left;
@@ -47,6 +48,42 @@
 	padding-left: 50px;
 	color: grey;
 }
+a.dating{
+color: grey; 
+	text-decoration: none;
+}
+a.readmore{
+color: grey; 
+	text-decoration: none;
+}
+.button5:hover{
+	background-color:#9ACD32; 
+}
+a.active{
+	color: #9ACD32;
+}
+a.dating:hover{
+	color: #9ACD32;
+}
+a.contactusnow{
+	color: white;
+	text-decoration: none;
+}
+
+a.downloadnow{
+	text-decoration: none;
+}
+a.contactpolicy{
+	text-decoration: none;
+	color: grey;
+}
+a.contactpolicy:hover{
+	color: white;
+}
+
+.box:hover{
+	background-color: #9ACD32;
+}
 
 ul.horizontal li {
 		padding-left: 20px;
@@ -74,6 +111,7 @@ ul.horizontal li {
 .col3{
 	float: left;
 }
+
 .box{
 	margin-top: 25px;
 	margin-left: 25px;
@@ -105,6 +143,9 @@ ul.horizontal li {
 	opacity: 0.7;
     background-color: #92C40A;
 }
+.box23:hover{
+	box-shadow: 2px 2px 5px 2px black;
+}
 .main2{
 	padding-left: 60px;
 	padding-top: 25px;
@@ -128,7 +169,18 @@ ul.horizontal li {
 	font-size: 16px;
 	color: white;
 }
-
+.button2:hover{
+	box-shadow: 2px 2px 5px 2px grey;
+}
+.button3:hover{
+	box-shadow: 2px 2px 5px 2px grey;
+}
+.button4:hover{
+	box-shadow: 2px 2px 5px 2px grey;
+}
+.button6:hover{
+	box-shadow: 2px 2px 5px 2px white;
+}
 
 .box2{
 	float: left;
@@ -298,14 +350,16 @@ ul.horizontal li {
 	width: 32%;
 }
 .button5{
-	background-color: #C8EE42;
-	border: transparent;
+	
+	background: white;
 	text-align: center;
 	border-radius: 5px;
+	border-width: 3px;
+	border-color: #C8EE42;
 	margin-top: 10px;
 	padding: 10px 40px;
 	font-size: 16px;
-	color: white;
+	color: grey;
 }
 
 .vital{
