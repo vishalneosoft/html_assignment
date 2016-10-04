@@ -11,16 +11,12 @@
 	margin: auto;
 }
 
-
-.clear{
-	clear: both;
-}
-
 .home{
 	color: grey;
 	text-decoration: none;
 	
 }
+
 
 a.home:hover{
 	text-decoration: none;
@@ -39,18 +35,11 @@ a.home:hover{
 	height: 95px;
 }
 
-.span{
-	font-family: serif;
-	color: white;
-	font-size: 24px;
-	padding-left: 20px;
-}
 .grey{
 	padding-top: 10px;
 }
 
 .box{
-	margin-left: 25px;
 	width:170px;
 	height: 45px;
 	border: 2px solid white;
@@ -71,9 +60,7 @@ a.home:hover{
 	background-color: #C8EE42;
 	padding-left:35px ;
 	padding-right:35px;
-	
 	margin-top: 20px;
-
 }
 
 .btn6:hover{
@@ -99,14 +86,13 @@ a.home:hover{
 	height: 80px;
 	border-radius: 0px;
 	opacity: 0.7;
-	background-color: #C8EE42;
 }
 .list_image{
 	list-style-image: url('../Images/arrow1.png');
 }
 .imageabout{
-	height: 280px;
 	margin-top: 130px;
+	height: 280px;
 	border: 7px solid lightgrey;
 }
 .bgimage{
@@ -121,22 +107,30 @@ a.home:hover{
 	background-repeat: no-repeat;
 	height: 700px;
 }
+.contactus{
+	margin-top: 100px;
+}
 
 .vital1{
 	color: white;
-	padding-top: 80px;
-	font-size: 40px;
+	padding-top: 60px;
 }
 .vital2{
 	color: white;
-	font-size: 30px;
+	padding-top: 20px;
 }
-.step{
+
+.step3{
 	color: white;
 	margin-top: 47px;
 }
 .step1{
-	margin-top: 155px;
+	margin-top: 110px;
+	margin-left: -15px;
+}
+
+.image_number{
+	width: 90%;
 }
 .white_clr{
 	background-color: white;
@@ -150,7 +144,6 @@ a.home:hover{
 	background-image: url('../Images/testimonial-bg.jpg');
 	background-repeat: no-repeat;
 	height: 500px;
-	margin-top: -40px;
 }
 .paddingdown{
 	padding-top: 120px;
