@@ -49,7 +49,8 @@ function validateForm() {
     var dotposition= emailAddress.lastIndexOf(".");
     var dot=/\.{2}/g;
     var dot1=/\@{2}/g;
-    if (aposition<1 || dotposition<aposition+2 || dotposition+2>=emailAddress.length || dot.test(emailAddress) || dot1.test(emailAddress))
+    var occurence=emailAddress.match(/@/g).length;
+    if (aposition<1 || dotposition<aposition+2 || dotposition+2>=emailAddress.length || dot.test(emailAddress) || dot1.test(emailAddress) || occurence>1)
     {
         alert( "Enter valid e-mail address" );
         document.myForm.email.focus();
