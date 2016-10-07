@@ -84,9 +84,9 @@ function validateForm() {
     	return false;
     }
 
-    var samepass= document.myForm.confirmpassword.value;
+    var confirmPass= document.myForm.confirmpassword.value;
 
-    if( samepass == "")
+    if( confirmPass == "")
     {
     	alert( "Re-Enter the password!" );
     	document.myForm.confirmpassword.focus();
@@ -138,6 +138,7 @@ function validateForm() {
     else    
     {
         alert( "Successfully Submitted the Form" );
+        document.myForm.reset();
     }
 
 }
