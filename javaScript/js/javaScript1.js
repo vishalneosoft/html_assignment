@@ -65,9 +65,11 @@ function validateForm() {
     	return false;
     }
 
-    if( pass.includes("!") || pass.includes("@") || pass.includes("#") || pass.includes("$") || pass.includes("%") || pass.includes("^") || pass.includes("&") || pass.includes("*"))
+    var specialChar= /^[0-9a-zA-Z]+$/;
+
+    if( !pass.match(specialChar))
     {
-    	alert( "Password should not contain Special characters" );
+    	alert( "Password should contain alphaNumeric characters only!" );
     	document.myForm.password.focus();
     	return false;
     }
@@ -95,9 +97,85 @@ function validateForm() {
     	document.myForm.confirmpassword.focus();
     	return false;
     }
+
+    var month1=document.myForm.month.value;
+    var day1=document.myForm.day.value;
+    var year1=document.myForm.year.value;
+
+    if( month1 == "Month" || day1 == "Day" || year1 == "Year")
+    {
+        alert ( "Please Enter Valid Birth Date" );
+        return false;
+    }
+
+    if( document.myForm.age.value == "" )
+    {
+        alert ( "Click on Age" );
+        return false;
+    }
+
+    if ( ( myForm.gender[0].checked == false ) && ( myForm.gender[1].checked == false ) )
+    {
+        alert ( "Please choose your Gender" );
+        return false;
+    }
+
+    if ( ( myForm.activity[0].checked == false ) && ( myForm.activity[1].checked == false ) && ( myForm.activity[2].checked == false ) )
+    {
+        alert ( "Please select atleast one Interest" );
+        return false;
+    }
+
+    if( document.myForm.textArea.value == "" )
+    {
+        alert( "Please write something About yourself!" );
+        document.myForm.textArea.focus();
+        return false;
+    }
+
+    else    
+    {
+        alert( "Successfully Submitted the Form" );
+    }
+
 }
 
-function resetform() {
-	alert( "Form has been Reset" );
-	document.getElementById("myForm").reset();
-}
+function calculateAge()
+    {
+        var month1=document.myForm.month.value;
+        var day1=document.myForm.day.value;
+        var year1=document.myForm.year.value;
+        var date1= new Date();
+        var dateYear= date1.getFullYear();
+        var dateMonth= date1.getMonth();
+        var dateToday= date1.getDate(); 
+        var age1 = dateYear - year1;
+        var age2 = 0;
+        if (dateMonth<month1)
+        {
+            age1--;
+        }
+        if ((month1 == dateMonth) && (dateToday < day1))
+        {
+            age1--;
+        }
+        if ( dateMonth>=month1)
+        {
+            age2=(dateMonth-month1-1)/12;
+        }
+        else
+        {
+            age2=(12-(month1-dateMonth-1))/12;
+        }
+        age1=age1+age2;
+        age1 = age1.toFixed(1);
+        document.myForm.age.value=age1;
+    }
+
+function resetform() 
+    {
+        document.myForm.firstname.focus();
+        document.myForm.reset();
+        alert( "Form has been Reset" );
+        return false;
+    }

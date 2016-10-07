@@ -150,13 +150,13 @@
 						</div>
 						<div class="pass_fileds">
 							<label>Password</label>
-							<input type="password" name="password" type="text" /> 
+							<input type="password" name="password"/> 
 						</div>
 					</li>
 					<li class="fileds">
 						<div class="pass_fileds">
 							<label>Confirm Password</label>
-							<input type="password" name="confirmpassword" type="text" /> 
+							<input type="password" name="confirmpassword"/> 
 						</div>
 							<div class="dob_fileds selectbox">
 								<label>My birthdate is</label>
@@ -164,22 +164,24 @@
 								<ul>
 									<li>
 										<select name="month" class="select month">
-											<option value="jan">Jan</option>
-											<option value="feb">Feb</option>
-											<option value="march">March</option>
-											<option value="april">April</option>
-											<option value="may">May</option>
-											<option value="june">June</option>
-											<option value="july">July</option>
-											<option value="aug">Aug</option>
-											<option value="sep">Sep</option>
-											<option value="oct">Oct</option>
-											<option value="nov">Nov</option>
-											<option value="dec">Dec</option>
+											<option value="Month">Month</option>
+											<option value="0">Jan</option>
+											<option value="1">Feb</option>
+											<option value="2">March</option>
+											<option value="3">April</option>
+											<option value="4">May</option>
+											<option value="5">June</option>
+											<option value="6">July</option>
+											<option value="7">Aug</option>
+											<option value="8">Sep</option>
+											<option value="9">Oct</option>
+											<option value="10">Nov</option>
+											<option value="11">Dec</option>
 										</select>
 									</li>
 									<li>
 										<select name="day" class="select day">
+											<option value="Day">Day</option>
 											<option value="1">01</option>
 											<option value="2">02</option>
 											<option value="3">03</option>
@@ -218,6 +220,7 @@
 
 									<li>
 										<select name="year" class="select year">
+											<option value="Year">Year</option>
 											<option value="1970">1970</option>
 											<option value="1971">1971</option>
 											<option value="1972">1972</option>
@@ -272,13 +275,13 @@
 					<li class="fileds">
 						<div class="age_fileds">
 							<label>Age</label>
-							<input name="age" type="text" /> 
+							<input name="age" onclick="calculateAge()" type="text" /> 
 						</div>
 						<div class="gender_fileds">
 							<label>Gender</label>
 							<ul>
-								<li><input type="radio" class="radio" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
-								<li><input type="radio" class="radio" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
+								<li><input type="radio" name="gender" class="radio" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
+								<li><input type="radio" name="gender" class="radio" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
 							</ul>	
 						</div>
 					</li>
@@ -286,14 +289,14 @@
 						<div class="interest_fileds">
 						<label>Interest</label>
 							<ul>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample19" /> <label class="css-label" for="checkbox_sample19">Reading</label></li>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample20" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
+								<li><input type="checkbox" name="activity" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
+								<li><input type="checkbox" name="activity" class="checkbox" id="checkbox_sample19" /> <label class="css-label" for="checkbox_sample19">Reading</label></li>
+								<li><input type="checkbox" name="activity" class="checkbox" id="checkbox_sample20" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
 							</ul>
 						</div>
 						<div class="about_you_fileds">
 						<label>About you</label>
-						<textarea></textarea>
+						<textarea name="textArea" type="text"></textarea>
 						</div>						
 					</li>
 				</ul>
