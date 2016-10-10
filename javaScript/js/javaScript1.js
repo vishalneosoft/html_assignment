@@ -139,7 +139,6 @@ function validateForm() {
     else    
     {
         alert( "Successfully Submitted the Form" );
-        document.myForm.reset();
         return true;
 
     }
