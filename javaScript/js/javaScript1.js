@@ -138,6 +138,7 @@ function validateForm() {
 
     else    
     {
+        document.myForm.firstname.focus();
         document.myForm.reset();
         alert( "Successfully Submitted the Form" );
         return false;
