@@ -147,11 +147,15 @@ function validateForm() {
 
 }
 
+
+
 function calculateAge()
     {
         var month1=document.myForm.month.value;
         var day1=document.myForm.day.value;
         var year1=document.myForm.year.value;
+        if(!(month1 == "Month" || day1 == "Day" || year1 == "Year"))
+        {
         var date1= new Date();
         var dateYear= date1.getFullYear();
         var dateMonth= date1.getMonth();
@@ -177,7 +181,9 @@ function calculateAge()
         age1=age1+age2;
         age1 = age1.toFixed(1);
         document.myForm.age.value=age1;
+        }
     }
+
 
 function resetform() 
     {
