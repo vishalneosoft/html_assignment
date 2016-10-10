@@ -1,5 +1,6 @@
+
 function validateForm() {
-	if( document.myForm.firstname.value == "" )
+    if( document.myForm.firstname.value == "" )
          {
             alert( "Please provide your First name!" );
             document.myForm.firstname.focus();
@@ -15,16 +16,16 @@ function validateForm() {
 
     if( document.myForm.phone.value == "" )
     {
-    	alert( "Please provide your Phone number!" );
-    	document.myForm.phone.focus();
-    	return false;
+        alert( "Please provide your Phone number!" );
+        document.myForm.phone.focus();
+        return false;
     }
 
     if( isNaN(document.myForm.phone.value))
     {
-    	alert( "Phone number can be Numeric Only!" );
-    	document.myForm.phone.focus();
-    	return false;
+        alert( "Phone number can be Numeric Only!" );
+        document.myForm.phone.focus();
+        return false;
     }
 
     var phoneNum= document.myForm.phone.value;
@@ -32,16 +33,16 @@ function validateForm() {
 
     if( phoneLen > 10 ||  phoneLen < 10)
     {
-    	alert( "Enter 10 digit Phone number only!" );
-    	document.myForm.phone.focus();
-    	return false;
+        alert( "Enter 10 digit Phone number only!" );
+        document.myForm.phone.focus();
+        return false;
     }
 
     if( isNaN(document.myForm.office.value))
     {
-    	alert( "Office number can be Numeric Only!" );
-    	document.myForm.office.focus();
-    	return false;
+        alert( "Office number can be Numeric Only!" );
+        document.myForm.office.focus();
+        return false;
     }
 
     var emailAddress=document.myForm.email.value;
@@ -49,8 +50,7 @@ function validateForm() {
     var dotposition= emailAddress.lastIndexOf(".");
     var dot=/\.{2}/g;
     var dot1=/\@{2}/g;
-    var occurence=emailAddress.match(/@/g).length;
-    if (aposition<1 || dotposition<aposition+2 || dotposition+2>=emailAddress.length || dot.test(emailAddress) || dot1.test(emailAddress) || occurence>1)
+    if (aposition<1 || dotposition<aposition+2 || dotposition+2>=emailAddress.length || dot.test(emailAddress) || dot1.test(emailAddress) || ((emailAddress.match(/\@/g).length)> 1))
     {
         alert( "Enter valid e-mail address" );
         document.myForm.email.focus();
@@ -63,42 +63,42 @@ function validateForm() {
 
     if( pass == "")
     {
-    	alert( "Enter the password!" );
-    	document.myForm.password.focus();
-    	return false;
+        alert( "Enter the password!" );
+        document.myForm.password.focus();
+        return false;
     }
 
     var specialChar= /^[0-9a-zA-Z]+$/;
 
     if( !pass.match(specialChar))
     {
-    	alert( "Password should contain alphaNumeric characters only!" );
-    	document.myForm.password.focus();
-    	return false;
+        alert( "Password should contain alphaNumeric characters only!" );
+        document.myForm.password.focus();
+        return false;
     }
 
 
     if( passLength < 8 || passLength > 12)
     {
-    	alert( "Password can be in range of 8-12 characters only!" );
-    	document.myForm.password.focus();
-    	return false;
+        alert( "Password can be in range of 8-12 characters only!" );
+        document.myForm.password.focus();
+        return false;
     }
 
-    var confirmPass= document.myForm.confirmpassword.value;
+    var samepass= document.myForm.confirmpassword.value;
 
-    if( confirmPass == "")
+    if( samepass == "")
     {
-    	alert( "Re-Enter the password!" );
-    	document.myForm.confirmpassword.focus();
-    	return false;
+        alert( "Re-Enter the password!" );
+        document.myForm.confirmpassword.focus();
+        return false;
     }
 
     if( samepass != pass)
     {
-    	alert( "Password is Not Matching!" );
-    	document.myForm.confirmpassword.focus();
-    	return false;
+        alert( "Password is Not Matching!" );
+        document.myForm.confirmpassword.focus();
+        return false;
     }
 
     var month1=document.myForm.month.value;
@@ -139,7 +139,6 @@ function validateForm() {
     else    
     {
         alert( "Successfully Submitted the Form" );
-        document.myForm.reset();
     }
 
 }
