@@ -210,6 +210,10 @@ $(document).ready(function(){
 					$("#enterOfficeNo").hide();
 				}
 		}
+		else
+		{
+			$("#enterOfficeNo").hide();
+		}
 	};
 
 	function checkEmail(){
