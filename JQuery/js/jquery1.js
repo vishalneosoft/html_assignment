@@ -113,8 +113,9 @@ $(document).ready(function(){
 
 
 	function checkFirstName() {
+		var firstNameExpression = /^[a-zA-Z]+$/;
 		var firstNameLen = $("#firstName").val().length;
-		if(firstNameLen<3)
+		if(firstNameLen<1)
 		{
 			$("#enterFirstName").text("*Enter First Name");
 			$("#enterFirstName").show();
@@ -122,13 +123,32 @@ $(document).ready(function(){
 		}
 		else
 		{
-			$("#enterFirstName").hide();
+			if( $("#firstName").val().match(firstNameExpression) )
+			{	
+				if( $("#firstName").val() == $("#lastName").val() )
+				{
+					$("#enterFirstName").html("<pre>*First and Last name should be different</pre>");
+					$("#enterFirstName").show();
+					check_firstName=true;
+				}	
+				else
+				{
+					$("#enterFirstName").hide();
+				}
+			}
+			else
+			{
+				$("#enterFirstName").text("*Name should have alphabet");
+				$("#enterFirstName").show();
+				check_firstName=true;
+			}
 		}
 	};
 
 	function checkLastName() {
+		var lastNameExpression = /^[a-zA-Z]+$/;
 		var lastNameLen = $("#lastName").val().length;
-		if(lastNameLen<3)
+		if(lastNameLen<1)
 		{
 			$("#enterLastName").text("*Enter Last Name");
 			$("#enterLastName").show();
@@ -136,7 +156,25 @@ $(document).ready(function(){
 		}
 		else
 		{
-			$("#enterLastName").hide();
+			if( $("#lastName").val().match(lastNameExpression) )
+			{
+				if( $("#lastName").val() == $("#firstName").val() )
+				{
+					$("#enterLastName").html("<pre>*First and Last name should be different</pre>");
+					$("#enterLastName").show();
+					check_lastName=true;
+				}	
+				else
+				{
+					$("#enterLastName").hide();
+				}
+			}
+			else
+			{
+				$("#enterLastName").text("*Name should have alphabet");
+				$("#enterLasttName").show();
+				check_firstName=true;
+			}
 		}
 	};
 
