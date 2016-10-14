@@ -1,0 +1,37 @@
+.incline{
+	display: inline-block;
+	width: 49%;
+	color: red;
+}
+
+.name_fileds{
+	float: left;
+}
+
+.phone_fileds{
+	float: left;
+}
+
+.email_fileds{
+	float: left;
+}
+
+.pass_fileds{
+	float: left;
+}
+
+.age_fileds{
+	float: left;
+}
+
+.gender_fileds{
+	float: left;
+}
+
+.interest_fileds{
+	float: left;
+}
+
+.dob_fileds{
+	float: left;
+}
