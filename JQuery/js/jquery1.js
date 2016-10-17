@@ -179,8 +179,17 @@ $(document).ready(function(){
 	};
 
 	function checkPhoneNo() {
+		var phoneValue = $("#phone").val();
 		var phoneNumeric = /^[0-9]+$/;
 		var phoneLen = $("#phone").val().length;
+		if(phoneValue < 1)
+			{
+			$("#enterPhoneNo").text("*Enter Phone No");
+			$("#enterPhoneNo").show();
+			check_phoneNo=true;
+			}
+		else
+		{
 		if( !($("#phone").val().match(phoneNumeric)) || phoneLen != 10)
 		{
 			$("#enterPhoneNo").text("*Enter Correct Phone No");
@@ -190,6 +199,7 @@ $(document).ready(function(){
 		else
 		{
 			$("#enterPhoneNo").hide();
+		}
 		}
 	};
 
@@ -220,7 +230,15 @@ $(document).ready(function(){
 		var emailExpression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;	
 		var emailValue = $("#email").val();
 		var emailLen = $("#email").val().length;
-		if( emailLen < 1 || emailExpression.test(emailValue) == false)
+		if(emailLen < 1 )
+		{
+			$("#enterEmail").text("*Enter Email Address");
+			$("#enterEmail").show();
+			check_email=true;
+		}
+		else
+		{
+		if( emailExpression.test(emailValue) == false)
 			{
 				$("#enterEmail").text("*Enter Correct Email Address");
 				$("#enterEmail").show();
@@ -230,6 +248,7 @@ $(document).ready(function(){
 			{
 				$("#enterEmail").hide();
 			}
+		}
 		
 	};
 
