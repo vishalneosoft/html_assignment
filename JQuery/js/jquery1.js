@@ -24,7 +24,6 @@ $(document).ready(function(){
 	var check_dob=false;
 
 
-
 	$("#firstName").focusout(function(){
 		checkFirstName();
 	});
@@ -111,6 +110,7 @@ $(document).ready(function(){
 		}
 	};
 
+	
 
 	function checkFirstName() {
 		var firstNameExpression = /^[a-zA-Z]+$/;
@@ -125,16 +125,7 @@ $(document).ready(function(){
 		{
 			if( $("#firstName").val().match(firstNameExpression) )
 			{	
-				if( $("#firstName").val() == $("#lastName").val() )
-				{
-					$("#enterFirstName").html("<pre>*First and Last name should be different</pre>");
-					$("#enterFirstName").show();
-					check_firstName=true;
-				}	
-				else
-				{
-					$("#enterFirstName").hide();
-				}
+				checkName();
 			}
 			else
 			{
@@ -158,16 +149,7 @@ $(document).ready(function(){
 		{
 			if( $("#lastName").val().match(lastNameExpression) )
 			{
-				if( $("#lastName").val() == $("#firstName").val() )
-				{
-					$("#enterLastName").html("<pre>*First and Last name should be different</pre>");
-					$("#enterLastName").show();
-					check_lastName=true;
-				}	
-				else
-				{
-					$("#enterLastName").hide();
-				}
+				checkName();
 			}
 			else
 			{
@@ -176,6 +158,18 @@ $(document).ready(function(){
 				check_firstName=true;
 			}
 		}
+	};
+
+	function checkName(){
+		if( $("#firstName").val() == $("#lastName").val() || $("#lastName").val() == $("#firstName").val())
+		{
+		 	$(".myName").html("<pre>*First and Last name should be different</pre>");
+		 	$(".myName").show();
+		}
+		else
+		{
+			$(".myName").hide();
+		}	
 	};
 
 	function checkPhoneNo() {
