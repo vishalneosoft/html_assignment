@@ -163,12 +163,12 @@ $(document).ready(function(){
 	function checkName(){
 		if( $("#firstName").val() == $("#lastName").val() || $("#lastName").val() == $("#firstName").val())
 		{
-		 	$(".myName").html("<pre>*First and Last name should be different</pre>");
-		 	$(".myName").show();
+		 	$(".myName1").html("<pre>*First and Last name should be different</pre>");
+		 	$(".myName1").show();
 		}
 		else
 		{
-			$(".myName").hide();
+			$(".myName1").hide();
 		}	
 	};
 
